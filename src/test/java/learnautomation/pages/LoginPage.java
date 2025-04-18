@@ -8,6 +8,7 @@ public class LoginPage {
 
     WebDriver driver;
 
+    //Comment add to see git is updated or not
     public LoginPage(WebDriver ldriver)
             //WebDriver as a reference.
             //In constructor, we have to pass this, otherwise it will not be identified the drivers
@@ -15,7 +16,6 @@ public class LoginPage {
     {
         this.driver = ldriver;
     }
-
     @FindBy(name = "email") WebElement uname;
 
     @FindBy(name = "password") WebElement pass;
