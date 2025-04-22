@@ -11,10 +11,7 @@ import learnautomation.utilities.Helper;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 import java.io.File;
 
@@ -46,8 +43,11 @@ public class BaseClass {
         Reporter.log("Setting Done- Test can be started", true);
 
     }
+
+   // @Parameters({"browser", "urlToBeTested"})
     @BeforeClass
-    public void setup() {
+   // public void setup(String browser, String url) {
+    public void setup(){
         //The Below line is for generating logs, and it will show you in console as well
         Reporter.log("Trying to start Browser and Getting Application ready", true);
 
@@ -55,6 +55,10 @@ public class BaseClass {
 
         //Use below when we call data from a config file
         driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getStagingURL());
+
+        //We are writing below line for Maven and taking input from pom.xml,and also mention 'String browser' on line 50 for this otherwise use the above line and remove 'String browser'
+        //This is also added while using below line @Parameters("browser")
+        //driver = BrowserFactory.startApplication(driver, browser, url);
 
         //The Below line is for generating logs, and it will show you in console as well
         Reporter.log("Browser and Application is up and running", true);

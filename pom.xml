@@ -84,22 +84,37 @@
             <version>17.0.0</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.36</version>
+        </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
+<!--    <build>-->
+<!--        <plugins>-->
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.5.3</version>
-                <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>XMLFiles/testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>3.5.3</version>-->
+<!--                <configuration>-->
 
-        </plugins>
-    </build>
+<!--                    <suiteXmlFiles>-->
+<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--                        <suiteXmlFile>XMLFiles/${xmlFiles}</suiteXmlFile>-->
+<!--                    </suiteXmlFiles>-->
+
+<!--                    <systemPropertyVariables>-->
+<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--                        <executionBrowser>${browser}</executionBrowser>-->
+<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--                        <appURL>${urlToBeTested}</appURL>-->
+<!--                    </systemPropertyVariables>-->
+
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+<!--        </plugins>-->
+<!--    </build>-->
 </project>
