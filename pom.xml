@@ -91,30 +91,30 @@
         </dependency>
     </dependencies>
 
-<!--    <build>-->
-<!--        <plugins>-->
+    <build>
+        <plugins>
 
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                <version>3.5.3</version>-->
-<!--                <configuration>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.3</version>
+                <configuration>
 
-<!--                    <suiteXmlFiles>-->
-<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
-<!--                        <suiteXmlFile>XMLFiles/${xmlFiles}</suiteXmlFile>-->
-<!--                    </suiteXmlFiles>-->
+                    <suiteXmlFiles>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>XMLFiles/${xmlFiles}</suiteXmlFile>
+                    </suiteXmlFiles>
 
-<!--                    <systemPropertyVariables>-->
-<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
-<!--                        <executionBrowser>${browser}</executionBrowser>-->
-<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
-<!--                        <appURL>${urlToBeTested}</appURL>-->
-<!--                    </systemPropertyVariables>-->
+                    <systemPropertyVariables>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <executionBrowser>${browser}</executionBrowser>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <appURL>${urlToBeTested}</appURL>
+                    </systemPropertyVariables>
 
-<!--                </configuration>-->
-<!--            </plugin>-->
+                </configuration>
+            </plugin>
 
-<!--        </plugins>-->
-<!--    </build>-->
+        </plugins>
+    </build>
 </project>
